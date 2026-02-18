@@ -30,8 +30,5 @@ jobs:
 
       - name: Bump version
         run: |
-          git pull origin main --force
           npm version major -m "Bump version to %s [skip ci]"
-          git add .
-          git commit -m "bump"
           git push origin main --force
